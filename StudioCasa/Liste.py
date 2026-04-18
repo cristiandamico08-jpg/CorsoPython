@@ -1,3 +1,5 @@
+# Le liste sono come gli array dinamici di java
+
 # Le liste possono contenere diversi tipi di dato all'interno di esse
 
 listaDiProva = [1, 2.1, "Stringa", True]
