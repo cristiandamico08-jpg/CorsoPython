@@ -75,3 +75,96 @@ if "marca" in auto:
     print("\nLa marca e' presente all'interno del dizionario")
 
 
+# Ci sono 2 modi per modificare/aggiungere un dato in un dizionario
+
+# 1 - Usando le parentesi []
+dizionarioModificabile = {
+    "colore" : "bianco",
+    "anno" : 2026,
+    "animale" : "leone"
+}
+print("\nDizionario prima della modifica:", dizionarioModificabile)
+
+dizionarioModificabile["animale"] = "gatto"
+print("Dizionario dopo la modifica:", dizionarioModificabile)
+
+# 2 - Usando il comando update()
+print("\nDizionario prima della modifica:", dizionarioModificabile)
+
+dizionarioModificabile.update({"animale" : "cane"})
+print("Dizionario dopo la modifica:", dizionarioModificabile)
+
+
+# Per rimuovere un oggetto da un dizionario ci sono due modi
+
+# 1 - comando pop()
+print("\nDizionario prima della modifica (pop()):", dizionarioModificabile)
+
+dizionarioModificabile.pop("animale")
+print("Dizionario dopo la modifica (pop()):", dizionarioModificabile)
+
+# 2 - comando del
+dizionarioModificabile.update({"animale" : "cane", "eta" : 3})
+print("\nDizionario prima della modifica:", dizionarioModificabile)
+
+del dizionarioModificabile["animale"]
+print("Dizionario dopo la modifica:", dizionarioModificabile)
+
+
+# Per rimuovere invece l'ultimo oggetto inserito in un dizionario si usa il comando popitem()
+print("\nDizionario prima della modifica:", dizionarioModificabile)
+
+dizionarioModificabile.popitem()
+print("Dizionario dopo la modifica:", dizionarioModificabile)
+
+
+# Per creare una copia identica di un dizionario ci sono 2 modi
+
+# 1 - comando copy()
+dizionarioCopiabile = {
+    "nome" : "Kristian",
+    "cognome" : "Ravasi",
+    "eta" : 20
+}
+
+dizionarioCopia = dizionarioCopiabile.copy()
+
+print("\nCopia del dizionario (copy()):", dizionarioCopia)
+
+# 2 - comando dict()
+dizionarioCopiabile2 = {
+    "nome" : "Tommaso",
+    "cognome" : "Fagnani",
+    "eta" : 74
+}
+
+dizionarioCopia2 = dict(dizionarioCopiabile2)
+
+print("Copia del dizionario (dict()):", dizionarioCopia2)
+
+
+# Puoi creare dei dizionari innestati
+
+famiglia = {
+    "padre" : {
+        "nome" : "Samuele",
+        "cognome" : "Mandaglio",
+        "eta" : 45
+    },
+
+    "madre" : {
+        "nome" : "Laura",
+        "cognome" : "Maloney",
+        "eta" : 40
+    },
+
+    "figlio" : {
+        "nome" : "Nicolas",
+        "cognome" : "Mandaglio",
+        "eta" : 18
+    }
+}
+
+print("\nIl padre ha", famiglia["padre"]["eta"], "anni")
+print("Il cognome della madre e'", famiglia["madre"]["cognome"])
+print("Il nome del figlio e'", famiglia["figlio"]["nome"])
