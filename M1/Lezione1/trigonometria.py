@@ -31,6 +31,7 @@ print("PiGreco modificato:", math.pi)
 
 '''
 COSTANTE = 5   # convenzione per dichiarare le "costanti"
+
 '''
 
 '''
